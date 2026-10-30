@@ -1,0 +1,8 @@
+project: savantenvs/rondb
+target: fuzz_http_auth_backend
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/fuzz_http_auth_backend/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_http_auth_backend
+    libfuzzer: true

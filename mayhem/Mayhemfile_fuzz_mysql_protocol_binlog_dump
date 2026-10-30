@@ -1,0 +1,8 @@
+project: savantenvs/rondb
+target: fuzz_mysql_protocol_binlog_dump
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation
+  - file://mayhem/fuzz_mysql_protocol_binlog_dump/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mysql_protocol_binlog_dump
+    libfuzzer: true
